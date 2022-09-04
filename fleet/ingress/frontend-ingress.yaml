@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: odoo14
   annotations:
-    kubernetes.io/ingress.class: odoo14
+    kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   rules:
@@ -12,12 +12,14 @@ spec:
         paths:
         - backend:
              serviceName: odoo14
-             servicePort: 8069
+             servicePort: http
+             pathType: ImplementationSpecific
           path: /
         - backend:
             serviceName: odoo14
-            servicePort: 8072
+            servicePort: longpooling
           path: /longpooling
+          pathType: ImplementationSpecific
   tls:
     - hosts:
         - odoo-14-test.kmee.dev.br
