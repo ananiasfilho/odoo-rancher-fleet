@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: frontend-odoo-14
   labels:
-    app: odoo-14
+    app: odoo14
     tier: frontend-odoo-14
 spec:
   type: NodePort
@@ -13,5 +13,5 @@ spec:
   - port: 8072
     name: longpooling
   selector:
-    app: frontend-odoo-14
+    app: odoo14
     tier: frontend-odoo-14
