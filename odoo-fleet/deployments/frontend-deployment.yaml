@@ -15,6 +15,7 @@ spec:
         app: odoo-14
         tier: frontend-odoo-14
     spec:
+      containers:
       - env:
         - name: HOST
         value: 10.10.6.163
@@ -22,7 +23,6 @@ spec:
         value: odoo
         - name: USER
         value: odoo
-      containers:
       - name: odoo
         image: odoo:14
         resources:
