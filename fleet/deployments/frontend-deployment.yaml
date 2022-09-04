@@ -24,4 +24,6 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 8069
+          name: /
         - containerPort: 8072
+          name: /longpooling
