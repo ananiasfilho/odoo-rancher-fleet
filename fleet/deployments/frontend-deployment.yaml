@@ -17,6 +17,13 @@ spec:
     spec:
       containers:
       - name: odoo14
+        env:
+          - name: HOST
+            value: 10.10.6.163
+          - name: USER
+            value: odoo
+          - name: PASSWORD
+            value: odoo
         image: odoo:14.0
         resources:
           requests:
