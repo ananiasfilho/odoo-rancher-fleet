@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: odoo-14-ssl
   annotations:
-    kubernetes.io/ingress.class: odoo
+    kubernetes.io/ingress.class: odoo-14
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   rules:
@@ -12,15 +12,15 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: frontend-odoo
+              serviceName: frontend-odoo-14
               servicePort: 8069
           - path: /longpooling
             backend:
-              serviceName: frontend-odoo
+              serviceName: frontend-odoo-14
               servicePort: 8072
   tls:
     - hosts:
-        - odoo-14.kmee.dev.br
+        - odoo-14-test.kmee.dev.br
       secretName: letsencrypt-prod
 status:
   loadBalancer:
