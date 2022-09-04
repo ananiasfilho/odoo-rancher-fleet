@@ -14,7 +14,7 @@ spec:
              serviceName: odoo14
              servicePort: http
           path: /
-         pathType: ImplementationSpecific
+          pathType: ImplementationSpecific
         - backend:
             serviceName: odoo14
             servicePort: longpooling
