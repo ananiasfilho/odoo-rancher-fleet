@@ -10,18 +10,18 @@ spec:
     - host: odoo-14-test.kmee.dev.br
       http:
         paths:
-          - path: /
-            backend:
-              serviceName: odoo14
-              servicePort: 8069
-          - path: /longpooling
-            backend:
-              serviceName: odoo14
-              servicePort: 8072
+        - backend:
+             serviceName: odoo14
+             servicePort: 8069
+          path: /
+        - backend:
+            serviceName: odoo14
+            servicePort: 8072
+          patch: /longpooling
   tls:
     - hosts:
         - odoo-14-test.kmee.dev.br
-      secretName: letsencrypt-prod
+      secretName: letsencrypt-odoo14
 status:
   loadBalancer:
     ingress:
