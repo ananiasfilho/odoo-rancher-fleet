@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: odoo-14-ssl
   annotations:
-    kubernetes.io/ingress.class: odoo-14
+    kubernetes.io/ingress.class: frontend-odoo-14
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   rules:

@@ -6,17 +6,17 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: odoo-14
+      app: frontend-odoo-14
       tier: frontend-odoo-14
   replicas: 1
   template:
     metadata:
       labels:
-        app: odoo-14
+        app: frontend-odoo-14
         tier: frontend-odoo-14
     spec:
       containers:
-      - name: odoo-14
+      - name: frontend-odoo-14
         image: odoo:14.0
         resources:
           requests:

@@ -11,5 +11,5 @@ spec:
   - port: 8069
   - port: 8072
   selector:
-    app: odoo-14
+    app: frontend-odoo-14
     tier: frontend-odoo-14
