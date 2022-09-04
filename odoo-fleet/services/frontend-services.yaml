@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-odoo
+  name: frontend-odoo14
   labels:
-    app: odoo
-    tier: frontend-odoo
+    app: odoo15
+    tier: frontend-odoo14
 spec:
   type: NodePort
   ports:
   - port: 8069
   - port: 8072
   selector:
-    app: odoo
-    tier: frontend-odoo
+    app: odoo14
+    tier: frontend-odoo14

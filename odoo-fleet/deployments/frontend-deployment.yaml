@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-odoo
+  name: frontend-odoo-14
   namespace: fleet-local
 spec:
   selector:
     matchLabels:
-      app: odoo
-      tier: frontend-odoo
+      app: odoo-14
+      tier: frontend-odoo-14
   replicas: 2
   template:
     metadata:
       labels:
-        app: odoo
-        tier: frontend-odoo
+        app: odoo-14
+        tier: frontend-odoo-14
     spec:
       - env:
         - name: HOST
