@@ -17,7 +17,7 @@ spec:
         - backend:
             serviceName: odoo14
             servicePort: 8072
-          patch: /longpooling
+          path: /longpooling
   tls:
     - hosts:
         - odoo-14-test.kmee.dev.br
