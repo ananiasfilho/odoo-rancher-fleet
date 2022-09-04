@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: odoo-ssl
+  name: odoo-14-ssl
   annotations:
     kubernetes.io/ingress.class: odoo
     cert-manager.io/cluster-issuer: letsencrypt-prod
