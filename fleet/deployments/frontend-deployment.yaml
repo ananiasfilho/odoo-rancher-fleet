@@ -16,19 +16,19 @@ spec:
         tier: frontend-odoo-14
     spec:
       containers:
-      - name: odoo-14
+      - env:
+          - name: HOST
+            value: 10.10.6.163
+          - name: PASSWORD
+            value: odoo
+          - name: USER
+            value: odoo
+        name: odoo-14
         image: odoo:14.0
         resources:
           requests:
             cpu: 100m
             memory: 100Mi
-      - env:
-        - name: HOST
-        value: 10.10.6.163
-        - name: PASSWORD
-        value: odoo
-        - name: USER
-        value: odoo
         ports:
         - containerPort: 8069
         - containerPort: 8072
