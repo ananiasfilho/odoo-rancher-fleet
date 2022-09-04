@@ -8,10 +8,10 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - name: http
-    port: 8069
-  - name: longpooling
-    port: 8072
+  - port: 8069
+    name: http
+  - port: 8072
+    name: longpooling
   selector:
     app: frontend-odoo-14
     tier: frontend-odoo-14
